@@ -1,0 +1,10 @@
+{
+    "name":"idochive",
+    "openbrowser":"false",
+    "web":{
+        "http":{
+            "port":"8080"
+        },
+        "webroot":"/"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "idochive",
+    "app": {
+        "webroot": "product/app"
+    },
+    "web": {
+        "http": {
+            "port": "8080"
+        }
+    },
+    "openBrowser": false
+}

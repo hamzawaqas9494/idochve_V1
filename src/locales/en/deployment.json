@@ -1,0 +1,107 @@
+{
+  "eyebrow": "Deployment and security",
+  "headline": "The boundary is the product decision.",
+  "body": "iDocHive is sold for customer-controlled, on-premise, private, or air-gapped deployment. Production data and AI processing stay inside infrastructure you approve. Public AI APIs are not required.",
+  "overview": {
+    "headline": "Deployment overview",
+    "items": [
+      "Customer-controlled infrastructure boundary",
+      "No production dependency on the public internet for air-gapped systems",
+      "No uncontrolled document or telemetry path",
+      "Local or customer-approved model inference",
+      "Customer-controlled encryption keys, identity, logging, and retention",
+      "Signed and scanned offline software updates for isolated environments"
+    ]
+  },
+  "profiles": {
+    "headline": "Three deployment profiles",
+    "items": [
+      {
+        "title": "Department Pilot",
+        "text": "Docker Compose or an equivalent limited runtime. One document collection, a named user group, measurable acceptance criteria, and a controlled path to production."
+      },
+      {
+        "title": "Enterprise Private",
+        "text": "K3s, Kubernetes, or customer-approved VMs. Redundant application services, highly available PostgreSQL + pgvector, internal load balancing, identity, SIEM, backup, and disaster-recovery controls."
+      },
+      {
+        "title": "Sovereign Air-Gapped",
+        "text": "No internet access in production. Internal model serving, offline installation and update packages, media scanning, local observability, and runbooks."
+      }
+    ]
+  },
+  "topology": {
+    "headline": "Sovereign air-gapped topology",
+    "body": "Offline update media enters a primary customer data center. An internal load balancer reaches application services and isolated AI inference nodes. PostgreSQL + pgvector and object storage stay on the inside. Replication crosses an internal WAN or dark fiber to the disaster-recovery site. There is no production internet egress.",
+    "nodes": [
+      "Offline update transfer",
+      "Primary customer data center",
+      "Internal load balancer",
+      "Application services",
+      "AI inference nodes",
+      "PostgreSQL + pgvector",
+      "Object storage",
+      "Internal WAN / dark fiber",
+      "Disaster-recovery site",
+      "Replication",
+      "No internet egress"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Identity and access",
+      "text": "Single sign-on where available, multi-factor authentication through the identity provider, role-based access, least privilege, record- or collection-level restrictions, and privileged-administrator monitoring."
+    },
+    {
+      "title": "Encryption and key ownership",
+      "text": "Encryption in transit and at rest. Customer-controlled keys where required. Approved data residency. Controlled exports."
+    },
+    {
+      "title": "Signed offline updates",
+      "text": "Isolated environments receive signed application, OCR, and model packages. Checksums, provenance, media-transfer approval, and rollback are part of the update lifecycle."
+    },
+    {
+      "title": "Model governance",
+      "text": "An approved-model registry tracks versions, prompt policy, retrieval evidence, and evaluation results. Customer content is not used for training without explicit authorization."
+    },
+    {
+      "title": "SIEM and audit integration",
+      "text": "Access, ingestion, inference, approval, export, and administrative events can stream to the customer SIEM through syslog, API, or an approved agent."
+    },
+    {
+      "title": "Backup and recovery",
+      "text": "Backup and restore are required. Two-site disaster recovery is designed for sovereign deployments. Availability and recovery objectives are contracted per topology — not published as a blanket uptime claim."
+    }
+  ],
+  "shared": {
+    "headline": "Shared responsibility",
+    "body": "Every proposal converts this baseline into a named RACI. No commercial terms are published here.",
+    "rows": [
+      {
+        "party": "Creation Next",
+        "owns": "Product software, configuration, solution architecture, deployment support, pipeline and workflow implementation, agreed integrations, training, support, and update packages."
+      },
+      {
+        "party": "Customer",
+        "owns": "Infrastructure unless contracted otherwise, identity and network access, data ownership, lawful processing, samples and subject-matter experts, role approval, security policy, and acceptance."
+      },
+      {
+        "party": "Local systems integrator",
+        "owns": "Local contracting where agreed, infrastructure delivery, Arabic business analysis, on-site support, and change management."
+      },
+      {
+        "party": "Technology providers",
+        "owns": "Licensed OCR, model, database, storage, security, or e-signature components and their offline update rights."
+      }
+    ]
+  },
+  "cert": {
+    "headline": "Certification status",
+    "items": [
+      "ISO 9001 held",
+      "ISO 27001 certified",
+      "ISO 42001 in progress"
+    ],
+    "note": "Designed to support customer compliance programs and deployment-specific control mapping. No software creates compliance by itself. Jurisdiction-specific conformity is validated for each deployment and tender."
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "eyebrow": "Government and regulated enterprise",
+  "headline": "Built for organizations that cannot send the archive outside the boundary.",
+  "body": "iDocHive is designed for ministries, authorities, archives, defence-adjacent organizations, infrastructure programs, cultural institutions, financial firms, healthcare providers, and other security-first enterprises.",
+  "segments": [
+    {
+      "title": "Ministries and authorities",
+      "text": "Convert circulars, case files, and departmental repositories into permission-aware organizational knowledge."
+    },
+    {
+      "title": "Government archives",
+      "text": "Digitize historical records, classify them, apply access rules, and retrieve with citations."
+    },
+    {
+      "title": "Defence-adjacent organizations",
+      "text": "Operate air-gapped or highly restricted document intelligence with signed offline updates and customer-controlled keys."
+    },
+    {
+      "title": "Construction and infrastructure programs",
+      "text": "Govern drawings, variations, correspondence, and handover records across multi-party projects."
+    },
+    {
+      "title": "Regulated enterprises",
+      "text": "Keep contracts, policies, and operational records inside an approved private environment."
+    },
+    {
+      "title": "Cultural institutions",
+      "text": "Protect collection, appraisal, and provenance files with restricted access and research-grade citations."
+    },
+    {
+      "title": "Financial organizations",
+      "text": "Support obligation tracking and policy answers without a public model path."
+    },
+    {
+      "title": "Healthcare organizations",
+      "text": "Apply private document intelligence where residency and access rules are non-negotiable."
+    }
+  ],
+  "journey": {
+    "headline": "A procurement path that starts with one collection",
+    "steps": [
+      "Discovery",
+      "Sovereign Document Assessment",
+      "Paid Proof of Value",
+      "Security and architecture validation",
+      "Production deployment",
+      "Training",
+      "Staged operational handover",
+      "Ongoing support"
+    ]
+  },
+  "concerns": {
+    "headline": "What each owner needs to see",
+    "items": [
+      {
+        "title": "Security-owner concerns",
+        "text": "No uncontrolled production data path. Identity, keys, SIEM, audit completeness, and air-gap topology."
+      },
+      {
+        "title": "Records-owner concerns",
+        "text": "Classification, versions, retention, retrieval quality, and a durable evidence trail."
+      },
+      {
+        "title": "Business-owner concerns",
+        "text": "One measurable process: faster search, lower manual processing, and a defined pilot outcome."
+      },
+      {
+        "title": "Procurement concerns",
+        "text": "Clear scope. Software, services, infrastructure, and digitization remain separable line items."
+      },
+      {
+        "title": "IT infrastructure concerns",
+        "text": "Customer-controlled runtime, PostgreSQL + pgvector, object storage, backup, and a documented handover."
+      }
+    ]
+  },
+  "controls": {
+    "headline": "Saudi control mapping, not a blanket certificate",
+    "body": "Designed to support customer compliance programs and deployment-specific control mapping, including Saudi PDPL, NCA ECC, NCA DCC, and NCA CCC when cloud infrastructure applies. iDocHive does not make an organization compliant by itself.",
+    "items": [
+      {
+        "title": "Saudi PDPL",
+        "text": "Supports controller and processor clarity, purpose limitation, retention, export logging, and customer-visible subprocessors. On-premise software is not automatically PDPL-compliant."
+      },
+      {
+        "title": "NCA ECC",
+        "text": "Maps to governance, defence, resilience, and third-party evidence from identity, access, vulnerability, logging, backup, and incident processes. Tender-specific control versions still apply."
+      },
+      {
+        "title": "NCA DCC",
+        "text": "Supports data-lifecycle mapping across classification, handling, storage, transfer, backup, destruction, and monitoring."
+      },
+      {
+        "title": "NCA CCC",
+        "text": "Applies when sovereign or private cloud services enter the design. Cloud-provider and tenant responsibilities stay separate."
+      }
+    ]
+  }
+}

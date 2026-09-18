@@ -1,0 +1,13 @@
+{
+  "adminPassword": "dev-only-change-me",
+  "datasources": {
+    "idochive": {
+      "dbdriver": "PostgreSQL",
+      "host": "127.0.0.1",
+      "port": "5432",
+      "database": "idochive",
+      "username": "idochive",
+      "password": "idochive_dev_only"
+    }
+  }
+}

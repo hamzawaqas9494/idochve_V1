@@ -1,0 +1,12 @@
+node_modules
+dist
+dist-ssr
+*.local
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+product/tools/
+product/app/storage/backups/
+product/app/api/storage/
+cookies.txt

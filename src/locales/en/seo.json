@@ -1,0 +1,26 @@
+{
+  "home": {
+    "title": "iDocHive | Sovereign Document Intelligence",
+    "description": "iDocHive turns enterprise archives into private, governed intelligence inside your approved environment. On-premise, private, sovereign cloud, or air-gapped."
+  },
+  "how": {
+    "title": "How iDocHive Turns Documents into Governed Intelligence",
+    "description": "Follow ingestion, encrypted storage, OCR, classification, permission-aware search, source-grounded answers, human approval, and audit evidence."
+  },
+  "deployment": {
+    "title": "On-Premise, Private, and Air-Gapped Deployment | iDocHive",
+    "description": "Department pilot, enterprise private, and sovereign air-gapped deployment. Customer-controlled keys, models, PostgreSQL with pgvector, and signed offline updates."
+  },
+  "government": {
+    "title": "Government and Regulated Enterprise Document Intelligence | iDocHive",
+    "description": "Governed document intelligence for ministries, archives, infrastructure programs, and regulated enterprises. Designed to support customer compliance mapping."
+  },
+  "book": {
+    "title": "Book an Architecture Review | iDocHive",
+    "description": "Qualify a sovereign document-intelligence assessment. Define the use case, security boundary, document profile, and success measures."
+  },
+  "privacy": {
+    "title": "Privacy Notice | iDocHive",
+    "description": "How iDocHive handles architecture-review inquiries. Do not upload confidential files through the public website."
+  }
+}

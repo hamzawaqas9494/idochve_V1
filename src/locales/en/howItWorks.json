@@ -1,0 +1,115 @@
+{
+  "eyebrow": "Ingestion to retrieval",
+  "headline": "Every step leaves evidence.",
+  "body": "Scroll the operational path. The visual stays with you while each stage highlights the system, the data path, the status, and the audit record it creates.",
+  "steps": [
+    {
+      "title": "Ingestion",
+      "text": "A user or approved service uploads or bulk-imports a document into a controlled collection.",
+      "audit": "ingestion.received · collection=NIA-GOV-CIRC · actor=records.officer",
+      "status": "Received"
+    },
+    {
+      "title": "Encrypted storage",
+      "text": "Documents Service stores the immutable original in customer-controlled object storage.",
+      "audit": "blob.stored · encrypted=true · original_immutable=true",
+      "status": "Original preserved"
+    },
+    {
+      "title": "Queue processing",
+      "text": "The job enters an internal queue. Inference stays asynchronous and does not depend on a public API.",
+      "audit": "queue.enqueued · worker=ocr-gateway",
+      "status": "Queued"
+    },
+    {
+      "title": "OCR",
+      "text": "The OCR service extracts text and layout for Arabic and English documents, including poor scans.",
+      "audit": "ocr.completed · lang=ar,en · confidence=0.81",
+      "status": "Text extracted"
+    },
+    {
+      "title": "Classification",
+      "text": "The pipeline assigns a document class and routes exceptions when confidence is low.",
+      "audit": "class.assigned · class=government_circular",
+      "status": "Classified"
+    },
+    {
+      "title": "Extraction",
+      "text": "Fields, tables, entities, and metadata are structured and linked to the specific document version.",
+      "audit": "extract.completed · fields=12 · version=1",
+      "status": "Structured"
+    },
+    {
+      "title": "Embedding",
+      "text": "Approved vectors are written to pgvector beside the governed PostgreSQL metadata.",
+      "audit": "embedding.written · store=pgvector · chunks=18",
+      "status": "Indexed"
+    },
+    {
+      "title": "Pending review",
+      "text": "Structured AI output is stored as pending_review until policy allows publication or action.",
+      "audit": "ai.output · state=pending_review · model=gateway/approved-v3",
+      "status": "Pending review"
+    },
+    {
+      "title": "Human approval",
+      "text": "A reviewer approves, rejects, edits, or requests changes. The system records approved_by and the timestamp.",
+      "audit": "workflow.approved · approved_by=records.officer · lock_after_approval=true",
+      "status": "Approved"
+    },
+    {
+      "title": "Audit logging",
+      "text": "Model version, prompt policy, inputs, result metadata, and the human decision are append-only.",
+      "audit": "audit.appended · tamper_protected=true",
+      "status": "Evidence retained"
+    },
+    {
+      "title": "Permission-aware search",
+      "text": "An authorized user searches. The API applies RBAC and content filters at query time, not only in the UI.",
+      "audit": "search.executed · filtered_unauthorized=3 · returned=7",
+      "status": "Authorized results"
+    },
+    {
+      "title": "Source-grounded response",
+      "text": "Hybrid search combines exact and semantic matches and returns citations to approved content only.",
+      "audit": "rag.completed · citations=3 · grounded=true",
+      "status": "Cited answer"
+    }
+  ],
+  "exceptions": {
+    "headline": "Safe outcomes when the path is uncertain",
+    "body": "The correct result may be refusal, escalation, uncertainty, or a human-review task. The system does not invent missing evidence.",
+    "items": [
+      {
+        "when": "OCR confidence is low",
+        "outcome": "Human review",
+        "detail": "The document enters a validation queue. Reviewers correct text or metadata before it becomes searchable intelligence."
+      },
+      {
+        "when": "A user requests a restricted document",
+        "outcome": "Access denied",
+        "detail": "The collection never enters retrieval context. The user sees a permission-safe empty or denied state."
+      },
+      {
+        "when": "Sources conflict",
+        "outcome": "Insufficient evidence",
+        "detail": "The answer presents the conflict, cites both sources, and can route comparison output for review."
+      },
+      {
+        "when": "The model lacks evidence",
+        "outcome": "Insufficient evidence",
+        "detail": "The system refuses to guess. It reports that authorized collections do not support the claim."
+      },
+      {
+        "when": "Approval is required",
+        "outcome": "Queued review",
+        "detail": "High-impact output stays pending_review until an accountable owner decides."
+      },
+      {
+        "when": "A service becomes unavailable",
+        "outcome": "Queued retry",
+        "detail": "Jobs wait on internal queues. Escalation follows contracted operational procedures."
+      }
+    ]
+  }
+}

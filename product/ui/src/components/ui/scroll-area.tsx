@@ -1,0 +1,15 @@
+import * as ScrollAreaPrimitive from "@radix-ui/react-scroll-area";
+import { cn } from "@/lib/utils";
+
+function ScrollArea({ className, children, ...props }: ScrollAreaPrimitive.ScrollAreaProps) {
+  return (
+    <ScrollAreaPrimitive.Root className={cn("overflow-hidden", className)} {...props}>
+      <ScrollAreaPrimitive.Viewport className="h-full w-full">{children}</ScrollAreaPrimitive.Viewport>
+      <ScrollAreaPrimitive.Scrollbar orientation="vertical" className="flex w-2 touch-none bg-transparent p-0.5">
+        <ScrollAreaPrimitive.Thumb className="relative flex-1 rounded-full bg-[var(--border)]" />
+      </ScrollAreaPrimitive.Scrollbar>
+    </ScrollAreaPrimitive.Root>
+  );
+}
+
+export { ScrollArea };

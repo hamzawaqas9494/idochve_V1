@@ -1,0 +1,74 @@
+{
+  "eyebrow": "Architecture review",
+  "headline": "Start with one document collection and one measurable outcome.",
+  "body": "Tell us the use case, security boundary, document profile, and success measures. Do not upload confidential files through this form.",
+  "unconfigured": "This form will open when the review desk is connected. Email business@idochive.com to request an architecture review.",
+  "success": "Your review request was received. A Creation Next specialist will respond using your work email.",
+  "error": "The review desk could not accept the request. Email business@idochive.com or try again.",
+  "consent": "I confirm this inquiry does not include confidential document samples, and I agree to be contacted about an architecture review.",
+  "submit": "Request architecture review",
+  "sending": "Sending…",
+  "fields": {
+    "name": "Full name",
+    "organization": "Organization",
+    "title": "Job title",
+    "country": "Country",
+    "email": "Work email",
+    "phone": "Phone (optional)",
+    "useCase": "Primary use case",
+    "volume": "Estimated document volume",
+    "languages": "Required languages",
+    "deployment": "Deployment requirement",
+    "internet": "Internet restrictions",
+    "identity": "Existing identity platform",
+    "siem": "Existing SIEM platform",
+    "timeline": "Target timeline",
+    "notes": "Additional information"
+  },
+  "useCases": [
+    "Government archive intelligence",
+    "Contract intelligence",
+    "Construction and project document control",
+    "Policy and procedure assistant",
+    "Controlled correspondence",
+    "Museum and provenance records",
+    "Other regulated records"
+  ],
+  "volumes": [
+    "Exploring / not yet counted",
+    "Under 100,000 documents",
+    "100,000 to 1 million",
+    "More than 1 million",
+    "Page volume still being assessed"
+  ],
+  "languages": [
+    "Arabic and English",
+    "Arabic",
+    "English",
+    "Arabic, English, and other"
+  ],
+  "deployments": [
+    "Exploring",
+    "Department pilot",
+    "Enterprise private",
+    "Sovereign cloud",
+    "Air-gapped"
+  ],
+  "internet": [
+    "No special restriction",
+    "Limited outbound access",
+    "Air-gapped / no production internet",
+    "Not yet defined"
+  ],
+  "timelines": [
+    "Within 3 months",
+    "3 to 6 months",
+    "6 to 12 months",
+    "Planning only"
+  ],
+  "errors": {
+    "required": "This field is required.",
+    "email": "Enter a work email address.",
+    "consent": "Consent is required to send this inquiry."
+  }
+}

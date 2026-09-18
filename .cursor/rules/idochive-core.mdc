@@ -1,0 +1,47 @@
+---
+description: Core iDocHive product, architecture, security, and AI workflow instructions
+alwaysApply: true
+---
+
+# iDocHive Cursor Rule
+
+Before planning or editing, read in order:
+
+1. `context/project-overview.md`
+2. `context/architecture.md`
+3. `context/ui-context.md`
+4. `context/code-standards.md`
+5. `context/ai-workflow-rules.md`
+6. `context/progress-tracker.md`
+
+Inspect current source code after reading context. This is a partially built project. Never assume greenfield state.
+
+Apply these rules:
+
+- Preserve working behavior.
+- Use incremental vertical slices.
+- Do not perform a full rewrite.
+- Record current evidence before proposing replacement.
+- Classify migration work as keep, adapt, replace, or defer.
+- Do not change architecture without updating the context files.
+- Do not start a second implementation unit before verifying and recording the current unit.
+- Never claim a check passed unless it ran successfully.
+- Ask for a decision when ambiguity changes security, data, contracts, or user behavior.
+
+Protect these invariants:
+
+- Production supports sovereign and air-gapped operation.
+- No required public service exists in the production path.
+- Workload ranges from zero or one file daily to one million pages daily after benchmark acceptance.
+- Document bytes never pass through GraphQL or RabbitMQ.
+- PostgreSQL and object storage hold durable truth.
+- Valkey holds reconstructable cache and fan-out only.
+- Long-running work never runs in HTTP or ColdFusion request threads.
+- Workers remain idempotent and checkpointed.
+- Authorization occurs before retrieval, preview, download, export, and realtime delivery.
+- Derived content inherits source permissions.
+- Originals remain encrypted and immutable.
+- Policy-controlled OCR and AI output remains pending review until approval.
+- Audit evidence stays attributable and append-only.
+
+Implement only the next approved unit in `context/progress-tracker.md`. Do not start GraphQL, RabbitMQ, Node, or Python until that unit is approved.

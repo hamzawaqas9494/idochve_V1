@@ -1,0 +1,11 @@
+{
+  "name": "idochive",
+  "web": {
+    "http": {
+      "port": 8080
+    },
+    "rewritesEnable": true,
+    "rewritesConfig": "urlrewrite.xml"
+  },
+  "openBrowser": false
+}

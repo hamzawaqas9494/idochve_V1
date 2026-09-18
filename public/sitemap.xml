@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://idochive.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idochive.com/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idochive.com/ar" />
+  </url>
+  <url>
+    <loc>https://idochive.com/how-it-works</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idochive.com/how-it-works" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idochive.com/ar/how-it-works" />
+  </url>
+  <url>
+    <loc>https://idochive.com/deployment</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idochive.com/deployment" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idochive.com/ar/deployment" />
+  </url>
+  <url>
+    <loc>https://idochive.com/government</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idochive.com/government" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idochive.com/ar/government" />
+  </url>
+  <url>
+    <loc>https://idochive.com/book</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idochive.com/book" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idochive.com/ar/book" />
+  </url>
+  <url>
+    <loc>https://idochive.com/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idochive.com/privacy" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idochive.com/ar/privacy" />
+  </url>
+</urlset>

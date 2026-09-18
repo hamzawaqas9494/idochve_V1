@@ -1,0 +1,60 @@
+{
+  "brand": "iDocHive",
+  "logoLine": "Sovereign Document Intelligence",
+  "nav": {
+    "how": "How It Works",
+    "deployment": "Deployment",
+    "solutions": "Solutions",
+    "security": "Security",
+    "government": "Government",
+    "book": "Book an Architecture Review",
+    "privacy": "Privacy"
+  },
+  "cta": {
+    "book": "Book an Architecture Review",
+    "how": "See How It Works",
+    "demo": "Watch the 3-Minute Demo",
+    "close": "Start with one document collection and one measurable outcome."
+  },
+  "lang": {
+    "en": "English",
+    "ar": "العربية",
+    "switch": "Language"
+  },
+  "footer": {
+    "tagline": "The governed enterprise document and knowledge intelligence layer for sovereign AI.",
+    "promise": "Your documents. Your data. Your private intelligence.",
+    "owner": "A product of Creation Next",
+    "iso": "ISO 9001 held. ISO 27001 certified. ISO 42001 in progress.",
+    "contact": "business@idochive.com",
+    "rights": "© 2026 Creation Next. All rights reserved.",
+    "phones": {
+      "sa": "+966 50 769 4941",
+      "us": "+1 201 340 1667",
+      "pk": "+92 323 2255537"
+    }
+  },
+  "skip": "Skip to content",
+  "menu": "Open menu",
+  "closeMenu": "Close menu",
+  "video": {
+    "title": "Product demonstration",
+    "unavailable": "The three-minute demonstration is shown during the architecture review. Book a review to walk the ingestion, retrieval, approval, and audit path with your document profile.",
+    "close": "Close"
+  },
+  "diagram": {
+    "open": "View detailed architecture",
+    "close": "Close diagram",
+    "zoom": "Detailed product architecture"
+  },
+  "status": {
+    "pending": "Pending review",
+    "approved": "Approved",
+    "denied": "Access denied",
+    "insufficient": "Insufficient evidence"
+  },
+  "privacy": {
+    "title": "Privacy notice",
+    "body": "The architecture-review form collects only the details needed to qualify a conversation. Do not upload confidential documents through this website. Form data is sent only when a review-desk endpoint is connected, or by email to business@idochive.com. Analytics tags are not loaded until a privacy-safe configuration is approved."
+  }
+}
