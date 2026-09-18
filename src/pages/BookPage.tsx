@@ -7,16 +7,9 @@ import {
   type RefObject,
 } from "react";
 
-import {
-  motion,
-  useReducedMotion,
-} from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 
-import {
-  Canvas,
-  useFrame,
-  useThree,
-} from "@react-three/fiber";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
 
 import * as THREE from "three";
 
@@ -114,9 +107,8 @@ function useEnhancedVisuals() {
         deviceMemory?: number;
       }
     ).connection;
-    const deviceMemory = (
-      navigator as Navigator & { deviceMemory?: number }
-    ).deviceMemory;
+    const deviceMemory = (navigator as Navigator & { deviceMemory?: number })
+      .deviceMemory;
 
     const evaluate = () => {
       const cpuOkay = (navigator.hardwareConcurrency || 8) >= 4;
@@ -350,7 +342,11 @@ function BookingHero({
       <div className="pointer-events-none absolute bottom-[-20%] right-[22%] h-96 w-96 rounded-full bg-indigo-400/[0.06] blur-[120px]" />
 
       <div className="pointer-events-none absolute inset-0 opacity-70">
-        <svg viewBox="0 0 1440 760" className="h-full w-full" preserveAspectRatio="none">
+        <svg
+          viewBox="0 0 1440 760"
+          className="h-full w-full"
+          preserveAspectRatio="none"
+        >
           <defs>
             <linearGradient id="book-flow-a" x1="0" y1="0" x2="1" y2="0">
               <stop offset="0" stopColor="#2dd4bf" stopOpacity="0" />
@@ -417,7 +413,10 @@ function BookingHero({
                   powerPreference: "high-performance",
                 }}
               >
-                <DemandFramePump active={nearViewport && !reducedMotion} fps={22} />
+                <DemandFramePump
+                  active={nearViewport && !reducedMotion}
+                  fps={22}
+                />
                 <IntakeField active={nearViewport && !reducedMotion} />
               </Canvas>
             </div>
@@ -563,7 +562,6 @@ function BookingFormSection({
           invalidateOnRefresh: true,
         },
       });
-
     }, section);
 
     return () => ctx.revert();
@@ -641,7 +639,11 @@ function BookingFormSection({
                       ? undefined
                       : { y: [-14, 62, -14], opacity: [0, 0.95, 0] }
                   }
-                  transition={{ duration: 2.8, repeat: Infinity, ease: "easeInOut" }}
+                  transition={{
+                    duration: 2.8,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
                   className="absolute left-2 right-2 top-1 h-px bg-gradient-to-r from-transparent via-cyan-300 to-transparent shadow-[0_0_14px_rgba(34,211,238,.85)]"
                 />
                 <motion.div
@@ -651,7 +653,11 @@ function BookingFormSection({
                       ? undefined
                       : { scale: [0.8, 1.25, 0.8], opacity: [0.28, 0.8, 0.28] }
                   }
-                  transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
+                  transition={{
+                    duration: 2.2,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
                   className="absolute left-1/2 top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full border border-teal-200 bg-teal-300/70 shadow-[0_0_18px_rgba(45,212,191,.85)]"
                 />
               </div>
@@ -662,7 +668,12 @@ function BookingFormSection({
                 className="h-full origin-left rounded-full bg-gradient-to-r from-teal-500 via-cyan-500 to-blue-500"
                 initial={false}
                 animate={{ scaleX: Math.max(completion / 100, 0.018) }}
-                transition={{ type: "spring", stiffness: 125, damping: 22, mass: 0.55 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 125,
+                  damping: 22,
+                  mass: 0.55,
+                }}
               />
             </div>
 
@@ -676,7 +687,11 @@ function BookingFormSection({
                     ? undefined
                     : { y: [0, 176, 0], opacity: [0.3, 1, 0.3] }
                 }
-                transition={{ duration: 4.6, repeat: Infinity, ease: "easeInOut" }}
+                transition={{
+                  duration: 4.6,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
               />
 
               <div className="space-y-1.5">
@@ -690,7 +705,11 @@ function BookingFormSection({
                       {selected ? (
                         <motion.div
                           layoutId="book-active-field-rail"
-                          transition={{ type: "spring", stiffness: 360, damping: 30 }}
+                          transition={{
+                            type: "spring",
+                            stiffness: 360,
+                            damping: 30,
+                          }}
                           className="absolute inset-0 rounded-lg border border-teal-200/70 bg-teal-50/80"
                         />
                       ) : null}
@@ -703,7 +722,11 @@ function BookingFormSection({
                         }
                         transition={
                           selected && !reducedMotion
-                            ? { duration: 1.5, repeat: Infinity, ease: "easeInOut" }
+                            ? {
+                                duration: 1.5,
+                                repeat: Infinity,
+                                ease: "easeInOut",
+                              }
                             : { duration: 0.2 }
                         }
                         className={`relative z-10 h-2 w-2 rounded-full ${
@@ -712,10 +735,14 @@ function BookingFormSection({
                             : "bg-slate-300"
                         }`}
                       />
-                      <span className={`relative z-10 font-mono ${selected ? "text-teal-700" : "text-slate-400"}`}>
+                      <span
+                        className={`relative z-10 font-mono ${selected ? "text-teal-700" : "text-slate-400"}`}
+                      >
                         {String(index + 1).padStart(2, "0")}
                       </span>
-                      <span className={`relative z-10 line-clamp-1 ${selected ? "font-medium text-slate-950" : "text-slate-500"}`}>
+                      <span
+                        className={`relative z-10 line-clamp-1 ${selected ? "font-medium text-slate-950" : "text-slate-500"}`}
+                      >
                         {fieldLabels[name]}
                       </span>
                     </div>
@@ -724,11 +751,22 @@ function BookingFormSection({
               </div>
             </div>
 
-            <div aria-hidden="true" className="mt-5 flex items-center gap-2 border-t border-slate-100 pt-4">
+            <div
+              aria-hidden="true"
+              className="mt-5 flex items-center gap-2 border-t border-slate-100 pt-4"
+            >
               <span className="relative flex h-2 w-2">
                 <motion.span
-                  animate={reducedMotion ? undefined : { scale: [1, 2.2], opacity: [0.5, 0] }}
-                  transition={{ duration: 1.6, repeat: Infinity, ease: "easeOut" }}
+                  animate={
+                    reducedMotion
+                      ? undefined
+                      : { scale: [1, 2.2], opacity: [0.5, 0] }
+                  }
+                  transition={{
+                    duration: 1.6,
+                    repeat: Infinity,
+                    ease: "easeOut",
+                  }}
                   className="absolute inset-0 rounded-full bg-teal-400"
                 />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-teal-500" />
@@ -758,7 +796,9 @@ function BookingFormSection({
 
           {status === "success" ? (
             <motion.div
-              initial={reducedMotion ? false : { opacity: 0, scale: 0.96, y: 20 }}
+              initial={
+                reducedMotion ? false : { opacity: 0, scale: 0.96, y: 20 }
+              }
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.65, ease: [0.2, 0.8, 0.2, 1] }}
               className="relative grid min-h-[360px] place-items-center overflow-hidden rounded-[1.5rem] border border-teal-200/70 bg-gradient-to-b from-teal-50 to-white p-8 text-center"
@@ -777,7 +817,9 @@ function BookingFormSection({
                 <div className="mx-auto grid h-16 w-16 place-items-center rounded-full border border-teal-300 bg-white shadow-[0_12px_40px_rgba(45,212,191,0.18)]">
                   <span className="text-2xl text-teal-600">✓</span>
                 </div>
-                <p className="mt-6 text-lg font-semibold text-teal-700">{t("success")}</p>
+                <p className="mt-6 text-lg font-semibold text-teal-700">
+                  {t("success")}
+                </p>
               </div>
             </motion.div>
           ) : (
@@ -785,7 +827,10 @@ function BookingFormSection({
               className="grid gap-5"
               onSubmit={onSubmit}
               onFocusCapture={(event) => {
-                const target = event.target as HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
+                const target = event.target as unknown as
+                  | HTMLInputElement
+                  | HTMLSelectElement
+                  | HTMLTextAreaElement;
                 if (target.name) setActiveField(target.name);
               }}
               onBlurCapture={(event) => {
@@ -799,20 +844,89 @@ function BookingFormSection({
               noValidate
             >
               <div className="grid gap-5 sm:grid-cols-2">
-                <Field name="name" label={t("fields.name")} error={errors.name} required />
-                <Field name="organization" label={t("fields.organization")} error={errors.organization} required />
-                <Field name="title" label={t("fields.title")} error={errors.title} required />
-                <Field name="country" label={t("fields.country")} error={errors.country} required />
-                <Field name="email" label={t("fields.email")} type="email" error={errors.email} required dir="ltr" />
+                <Field
+                  name="name"
+                  label={t("fields.name")}
+                  error={errors.name}
+                  required
+                />
+                <Field
+                  name="organization"
+                  label={t("fields.organization")}
+                  error={errors.organization}
+                  required
+                />
+                <Field
+                  name="title"
+                  label={t("fields.title")}
+                  error={errors.title}
+                  required
+                />
+                <Field
+                  name="country"
+                  label={t("fields.country")}
+                  error={errors.country}
+                  required
+                />
+                <Field
+                  name="email"
+                  label={t("fields.email")}
+                  type="email"
+                  error={errors.email}
+                  required
+                  dir="ltr"
+                />
                 <Field name="phone" label={t("fields.phone")} dir="ltr" />
-                <Select name="useCase" label={t("fields.useCase")} options={t("useCases", { returnObjects: true }) as string[]} error={errors.useCase} />
-                <Select name="volume" label={t("fields.volume")} options={t("volumes", { returnObjects: true }) as string[]} error={errors.volume} />
-                <Select name="languages" label={t("fields.languages")} options={t("languages", { returnObjects: true }) as string[]} error={errors.languages} />
-                <Select name="deployment" label={t("fields.deployment")} options={t("deployments", { returnObjects: true }) as string[]} error={errors.deployment} />
-                <Select name="internet" label={t("fields.internet")} options={t("internet", { returnObjects: true }) as string[]} error={errors.internet} />
-                <Field name="identity" label={t("fields.identity")} error={errors.identity} required />
-                <Field name="siem" label={t("fields.siem")} error={errors.siem} required />
-                <Select name="timeline" label={t("fields.timeline")} options={t("timelines", { returnObjects: true }) as string[]} error={errors.timeline} />
+                <Select
+                  name="useCase"
+                  label={t("fields.useCase")}
+                  options={t("useCases", { returnObjects: true }) as string[]}
+                  error={errors.useCase}
+                />
+                <Select
+                  name="volume"
+                  label={t("fields.volume")}
+                  options={t("volumes", { returnObjects: true }) as string[]}
+                  error={errors.volume}
+                />
+                <Select
+                  name="languages"
+                  label={t("fields.languages")}
+                  options={t("languages", { returnObjects: true }) as string[]}
+                  error={errors.languages}
+                />
+                <Select
+                  name="deployment"
+                  label={t("fields.deployment")}
+                  options={
+                    t("deployments", { returnObjects: true }) as string[]
+                  }
+                  error={errors.deployment}
+                />
+                <Select
+                  name="internet"
+                  label={t("fields.internet")}
+                  options={t("internet", { returnObjects: true }) as string[]}
+                  error={errors.internet}
+                />
+                <Field
+                  name="identity"
+                  label={t("fields.identity")}
+                  error={errors.identity}
+                  required
+                />
+                <Field
+                  name="siem"
+                  label={t("fields.siem")}
+                  error={errors.siem}
+                  required
+                />
+                <Select
+                  name="timeline"
+                  label={t("fields.timeline")}
+                  options={t("timelines", { returnObjects: true }) as string[]}
+                  error={errors.timeline}
+                />
               </div>
 
               <label data-book-field className="group grid gap-2 text-sm">
@@ -830,7 +944,10 @@ function BookingFormSection({
                 <input name="companyWebsite" tabIndex={-1} autoComplete="off" />
               </div>
 
-              <div data-book-field className="rounded-xl border border-slate-200 bg-slate-50/70 p-4">
+              <div
+                data-book-field
+                className="rounded-xl border border-slate-200 bg-slate-50/70 p-4"
+              >
                 <label className="flex items-start gap-3 text-sm text-slate-700">
                   <input
                     type="checkbox"
@@ -858,18 +975,27 @@ function BookingFormSection({
                 data-book-field
                 type="submit"
                 disabled={!configured || status === "sending"}
-                whileHover={configured && status !== "sending" && !reducedMotion ? { y: -2, scale: 1.005 } : undefined}
-                whileTap={configured && status !== "sending" && !reducedMotion ? { scale: 0.995 } : undefined}
+                whileHover={
+                  configured && status !== "sending" && !reducedMotion
+                    ? { y: -2, scale: 1.005 }
+                    : undefined
+                }
+                whileTap={
+                  configured && status !== "sending" && !reducedMotion
+                    ? { scale: 0.995 }
+                    : undefined
+                }
                 className="relative inline-flex min-h-13 items-center justify-center overflow-hidden rounded-xl bg-slate-950 px-5 text-sm font-semibold text-white shadow-[0_14px_34px_rgba(15,23,42,0.18)] transition disabled:cursor-not-allowed disabled:opacity-45"
               >
                 <motion.span
                   aria-hidden="true"
-                  animate={
-                    reducedMotion
-                      ? undefined
-                      : { x: ["-130%", "150%"] }
-                  }
-                  transition={{ duration: 2.8, repeat: Infinity, repeatDelay: 2.2, ease: "easeInOut" }}
+                  animate={reducedMotion ? undefined : { x: ["-130%", "150%"] }}
+                  transition={{
+                    duration: 2.8,
+                    repeat: Infinity,
+                    repeatDelay: 2.2,
+                    ease: "easeInOut",
+                  }}
                   className="absolute inset-y-0 w-28 -skew-x-12 bg-gradient-to-r from-transparent via-white/14 to-transparent"
                 />
                 <span className="relative z-10">
@@ -1019,12 +1145,7 @@ function Field({
   );
 }
 
-function Select({
-  name,
-  label,
-  options,
-  error,
-}: SelectProps) {
+function Select({ name, label, options, error }: SelectProps) {
   const id = `field-${name}`;
 
   return (
